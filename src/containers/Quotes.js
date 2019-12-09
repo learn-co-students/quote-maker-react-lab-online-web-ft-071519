@@ -5,6 +5,14 @@ import QuoteCard from '../components/QuoteCard';
 class Quotes extends Component {
 
   render() {
+      const quotes = [
+          {
+              id: '23423424242-42342423424242-fafdb',
+              content: 'One Awesome Quote',
+              author: 'Luke Ghenco'
+          }
+      ];
+
     return (
       <div>
         <hr />
@@ -15,6 +23,7 @@ class Quotes extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-4">
+                {quotes.map(q => <QuoteCard key={q.id} {...q} />)}
               {/*
                 TODO:
 
