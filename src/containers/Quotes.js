@@ -22,6 +22,7 @@ class Quotes extends Component {
                     <QuoteCard
                         key={q.id}
                         {...q}
+                        quote={q}
                         handleUpvote={this.props.upvoteQuote}
                         handleDownvote={this.props.downvoteQuote}
                         handleRemoveQuote={this.props.removeQuote}
