@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import uuid from 'uuid';
 import { connect } from 'react-redux';
-import { addQuote } from '../actions/quotes';
+import { addQuote} from '../actions/quotes';
 
 class QuoteForm extends Component {
 
@@ -25,7 +25,11 @@ class QuoteForm extends Component {
     // Create quote object from state
     const quote = this.state;
     // Pass quote object to action creator
-    this.props.addQuote(quote);
+    this.props.addQuote({
+      ...quote,
+      id: uuid(),
+      votes: 0
+    });
     // Update component state to return to default state
     this.setState({content: '', author: ''})
   }
