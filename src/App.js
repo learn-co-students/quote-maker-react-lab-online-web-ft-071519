@@ -1,21 +1,29 @@
 import React, { Component } from 'react';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="container-fluid">
-        <div className="row title justify-content-center" style={{ paddingTop: '12px' }}>
-          <h1>Quote Maker</h1>
-        </div>
-        <hr />
-        {/*
-          TODO:
+// Import Functions:
 
-          Render QuoteForm and Quotes Components
+// Import Components:
+import QuoteForm from "./components/QuoteForm"
+import Quotes from './containers/Quotes'
+
+
+class App extends Component {
+   render() {
+      console.log("You are in App.js")
+      return (
+         <div className="container-fluid">
+         <div className="row title justify-content-center" style={{ paddingTop: '12px' }}>
+            <h1>Quote Maker</h1>
+         </div>
+         <hr />
+         {/*
+         TODO: Render QuoteForm and Quotes Components
          */}
-      </div>
-    );
-  }
+            <QuoteForm />
+            <Quotes />
+         </div>
+      );
+   }
 }
 
-export default App;
+export default (App);
