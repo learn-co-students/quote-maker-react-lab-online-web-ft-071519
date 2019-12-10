@@ -5,6 +5,18 @@ import QuoteCard from '../components/QuoteCard';
 class Quotes extends Component {
 
   render() {
+    const quotes = [
+      {
+        id: '23423424242-42342423424242-fafdb',
+        content: 'One Awesome Quote',
+        author: 'Luke Ghenco'
+      },
+      {
+        id: '23423424242-42342423424242-fafdb1',
+        content: 'One Awesome Quote1',
+        author: 'Luke Ghenco1'
+      }
+    ]
     return (
       <div>
         <hr />
@@ -15,11 +27,9 @@ class Quotes extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-4">
-              {/*
-                TODO:
 
-                Render Quotes With QuoteCard component and pass down callback props for removing, upvoting and downvoting quotes
-               */}
+
+              {quotes.map(q => (<QuoteCard {...q} />))}
             </div>
           </div>
         </div>
