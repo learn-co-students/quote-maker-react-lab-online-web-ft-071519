@@ -7,15 +7,12 @@ class QuoteForm extends Component {
 
 
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      content: '',
-      author: ''
-    }
-    this.handleOnChange = this.handleOnChange.bind(this);
-    this.handleOnSubmit = this.handleOnSubmit.bind(this);
+
+  state = {
+    content: '',
+    author: ''
   }
+
 
   handleOnChange = event => {
 
@@ -29,11 +26,12 @@ class QuoteForm extends Component {
   handleOnSubmit = event => {
 
     event.preventDefault();
-    debugger
-    this.props.addQuote({ ...this.state, id: uuid() })
+
+    this.props.addQuote({ ...this.state, id: uuid(), votes: 0 })
     this.setState({
       content: '',
       author: ''
+
     })
   }
 
