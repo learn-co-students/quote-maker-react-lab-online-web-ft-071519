@@ -7,9 +7,11 @@ import rootReducer from './reducers/index'
 
 let store = createStore(rootReducer)
 
+console.log("index.js")
+
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('root')
+   <Provider store={store}>
+      <App />
+   </Provider>,
+   document.getElementById('root')
 );
